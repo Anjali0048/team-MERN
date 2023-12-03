@@ -10,12 +10,12 @@ const Cart = () => {
 
 
   return (
-    <div className=" max-w-6xl mx-auto mt-10">
+    <div className=" max-w-6xl mx-auto mt-10 p-4">
       {
         team.length > 0 ?
         (
-          <div className="container">
-            <div className="w-[60%]">
+          <div className="container flex flex-col md:flex-row">
+            <div className="w-full md:w-[60%] ">
               {
                 team.map((user) => {
                   return <CartItem key={user._id} user={user} />
@@ -23,7 +23,7 @@ const Cart = () => {
               }
             </div>
 
-            <div className=" w-[40%] flex flex-col max-h-screen ">
+            <div className=" w-full md:w-[40%] mt-4 md:mt-0 ">
               <div>
                 <div className="text-green-600 font-semibold text-2xl">Your Team</div>
                 <p className="mt-4">
