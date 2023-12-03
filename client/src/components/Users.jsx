@@ -21,7 +21,7 @@ const Users = ({post}) => {
   const addFriend = () => {
     if(post.available === "true"){
       dispatch(add(post));
-      toast.success("user added to cart");
+      toast.success("user added to team");
     }
     else{
       toast.error("user is not available")
