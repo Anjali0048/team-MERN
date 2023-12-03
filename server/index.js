@@ -30,7 +30,7 @@ app.use(cors())
 app.use("/api", userRoute)
 app.use("/api/team", teamRoute)
 
-app.use((err,req,res) => {
+app.use((res,err) => {
     const errorStatus = err.status || 500
     const errorMsg = err.message || "Something went wrong"
     return res.status(errorStatus).json({
